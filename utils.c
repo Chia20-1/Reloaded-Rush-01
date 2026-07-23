@@ -6,18 +6,18 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/23 17:15:18 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/23 19:56:45 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <rush01.h>
 
-void	ft_putchar(char c)
+static void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int nb)
+static void	ft_putnbr(int nb)
 {
 	int	n;
 
@@ -38,11 +38,17 @@ void	ft_putnbr(int nb)
 	}
 }
 
-void	ft_putstr(char *str)
+static void	ft_putstr(char *str)
 {
 	while (*str)
 	{
 		ft_putchar(*str);
 		str++;
 	}
+}
+
+int	error_return_one(void)
+{
+	ft_putstr("Invalid clue input");
+	return (1);
 }
