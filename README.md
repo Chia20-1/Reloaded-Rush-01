@@ -9,6 +9,9 @@ rush01.h
 main.c
  - program main entry point
 
+input_validation.c
+ - validate clue input
+
 init.c
  - parse input
  - store clues

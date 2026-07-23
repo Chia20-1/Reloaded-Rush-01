@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/23 19:55:29 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/23 20:00:08 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ typedef struct s_board
 	int	cells[SIZE][SIZE];
 }	t_grid;
 
-// Parser
+// Input validation
 bool	is_valid_input(int argc, char **argv);
 
 // Utils
