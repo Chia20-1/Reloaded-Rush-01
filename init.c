@@ -6,7 +6,10 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:19:40 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/23 17:19:41 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/23 20:51:17 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "rush01.h"
+
+t_clues populate_clues()
