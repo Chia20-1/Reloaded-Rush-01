@@ -1,48 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   rush01.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/23 17:15:18 by chilim           ###   ########.fr       */
+/*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
+/*   Updated: 2026/07/23 17:16:38 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush01.h>
+#ifndef RUSH01_h
+# define RUSH01_h
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include <unistd.h>
 
-void	ft_putnbr(int nb)
-{
-	int	n;
-
-	n = nb;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		n *= -1;
-	}
-	if (nb < 10)
-	{
-		ft_putchar(n + '0');
-	}
-	else
-	{
-		putnbr(n / 10);
-		putchar(n % 10 + '0');
-	}
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-	{
-		ft_putchar(*str);
-		str++;
-	}
-}
+#endif
