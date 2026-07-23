@@ -6,14 +6,14 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:19:37 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/23 19:56:15 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/23 20:20:18 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush01.h>
+#include "rush01.h"
 
 int	main(int argc, char **argv)
 {
-	if (!is_valid_input)
+	if (!is_valid_input(argc, argv))
 		return (error_return_one());
 }
