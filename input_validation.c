@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser.c                                           :+:      :+:    :+:   */
+/*   input_validation.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:45:29 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/23 19:54:34 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/23 20:01:55 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static bool	has_valid_count(char *str)
 
 bool	is_valid_input(int argc, char **argv)
 {
-	if (argv != 2)
+	if (argc != 2)
 		return (false);
 	if (!is_valid_string && !has_valid_count)
 		return (false);
