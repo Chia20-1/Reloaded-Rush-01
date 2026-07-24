@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:19:40 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 14:06:32 by xinchong         ###   ########.fr       */
+/*   Updated: 2026/07/24 14:10:57 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,16 @@ t_clues populate_clues(char *str, t_clues *clues)
 		if (index <= SIZE)
 			clues->top[index] = value;
 		// Bottom
-		else if ()
+		else if (index <= SIZE * 2)
 			clues->bottom[index] = value;
 		// Left
-		else if ()
+		else if (index <= SIZE * 3)
 			clues->left[index] = value;
 		// Right
-		else if ()
+		else if (index <= SIZE * 4)
 			clues->right[index] = value;
 		index++;
+		str += 2;
 	}
 }
 
