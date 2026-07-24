@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/24 15:44:06 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/24 18:14:57 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	error_return_one(void)
 	return (1);
 }
 
-void    print_board(int board[SIZE][SIZE])
+void	print_board(t_board *board)
 {
 	int		row;
 	int		col;
@@ -44,7 +44,7 @@ void    print_board(int board[SIZE][SIZE])
 		col = 0;
 		while (col < SIZE)
 		{
-			c = board[row][col] + '0';
+			c = board->cells[row][col] + '0';
 			ft_putchar(c);
 			if (col < 3)
 				ft_putchar(' ');
