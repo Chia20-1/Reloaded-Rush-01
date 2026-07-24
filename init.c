@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:19:40 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 14:10:57 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/24 14:25:36 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,20 @@ t_clues populate_clues(char *str, t_clues *clues)
 	}
 }
 
-t_board set_boardzero(t_board *board)
+void init_board(t_board *board)
 {
-	board->cells[SIZE][SIZE] = {0};
+	int	row;
+	int	column;
+
+	row = 0;
+	while(row < SIZE)
+	{
+		column = 0;
+		while(column < SIZE)
+		{
+			board->cells[row][column] = 0;	
+			column++;
+		}
+		row++;
+	}
 }

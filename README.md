@@ -62,3 +62,7 @@ utils.c
 
 
 ### How do we do backtracking to fill up the remaining cells in the board?
+
+## Visualization to Parse Input into Clues Struct
+
+![alt text](image.png)
