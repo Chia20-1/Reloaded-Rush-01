@@ -54,3 +54,26 @@ int	error_return_one(void)
 	ft_putstr("Error");
 	return (1);
 }
+
+void	print_grid(int grid[4][4])
+{
+	int		row;
+	int		col;
+	char	c;
+
+	row = 0;
+	while (row < 4)
+	{
+		col = 0;
+		while (col < 4)
+		{
+			c = grid[row][col] + '0';
+			putchar(c);
+			if (col < 3)
+				putchar(' ');
+			col++;
+		}
+		putchar('\n');
+		row++;
+	}
+}
