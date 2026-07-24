@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/24 14:28:34 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/24 15:44:06 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,29 +16,6 @@ static void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
-/*
-static void	ft_putnbr(int nb)
-{
-	int	n;
-
-	n = nb;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		n *= -1;
-	}
-	if (nb < 10)
-	{
-		ft_putchar(n + '0');
-	}
-	else
-	{
-		ft_putnbr(n / 10);
-		ft_putchar(n % 10 + '0');
-	}
-}
-*/
 
 static void	ft_putstr(char *str)
 {
@@ -55,23 +32,23 @@ int	error_return_one(void)
 	return (1);
 }
 
-void	print_board(int board[SIZE][SIZE])
+void    print_board(int board[SIZE][SIZE])
 {
 	int		row;
-	int		column;
+	int		col;
 	char	c;
 
 	row = 0;
 	while (row < SIZE)
 	{
-		column = 0;
-		while (column < SIZE)
+		col = 0;
+		while (col < SIZE)
 		{
-			c = board[row][column] + '0';
+			c = board[row][col] + '0';
 			ft_putchar(c);
-			if (column < 3)
+			if (col < 3)
 				ft_putchar(' ');
-			column++;
+			col++;
 		}
 		ft_putchar('\n');
 		row++;
