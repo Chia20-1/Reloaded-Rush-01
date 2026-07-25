@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush01.h"
+#include "../rush01.h"
 
 int	count_from_left(t_board *board, int row)
 {

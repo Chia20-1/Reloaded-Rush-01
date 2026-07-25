@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.h                                           :+:      :+:    :+:   */
+/*   test_validate_clues.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 18:08:27 by chilim           ###   ########.fr       */
+/*   Created: 2026/07/25 21:07:51 by chilim            #+#    #+#             */
+/*   Updated: 2026/07/25 21:07:51 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush01.h"
+#include "../rush01.h"
 #include <stdio.h>
 
-// Test print clues
+int		count_from_left(t_board *board, int row);
+int		count_from_right(t_board *board, int row);
+int		count_from_top(t_board *board, int col);
+int		count_from_bottom(t_board *board, int col);
+bool	are_all_clues_satisfied(t_board *board, t_clues *clues);
+
 void	print_clues(t_clues *clues)
 {
 	int		i;
@@ -40,13 +45,28 @@ void	print_clues(t_clues *clues)
 	}
 }
 
-int	main(int argc, char **argv)
+// ./rush01 "4 3 2 1 1 2 2 2 4 3 2 1 1 2 2 2" | cat -e
+int	main(void)
 {
-	t_clues	clues;
+	t_clues clues = {
+	.top = {4, 3, 2, 1},
+	.bottom = {1, 2, 2, 2},
+	.left = {4, 3, 2, 1},
+	.right = {1, 2, 2, 2}
+	};
 
-	if (!is_valid_input(argc, argv))
-		return (error_return_one());
-	populate_clues(argv[1], &clues);
+	t_board	board = {{
+		{1, 2, 3, 4},
+		{2, 3, 4, 1},
+		{3, 4, 1, 2},
+		{4, 1, 2, 3}
+	}};
+
+	int clue_index = 3;
 	print_clues(&clues);
+	printf("\nFrom left: %d\n", count_from_left(&board, clue_index));
+	printf("From right: %d\n", count_from_right(&board, clue_index));
+	printf("From top: %d\n", count_from_top(&board, clue_index));
+	printf("From bottom: %d\n", count_from_bottom(&board, clue_index));
 	return (0);
 }
