@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/25 22:05:46 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/25 23:11:07 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,5 @@ bool		are_all_clues_satisfied(t_board *board, t_clues *clues);
 
 // Solver
 bool		backtrack(t_board *board, t_clues *clues, int position);
-
-// Testing
-// void		print_clues(t_clues *clues);
 
 #endif

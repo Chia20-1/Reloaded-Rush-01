@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/24 18:14:57 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/25 23:10:25 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	ft_putstr(char *str)
 
 int	error_return_one(void)
 {
-	ft_putstr("Error");
+	ft_putstr("Error\n");
 	return (1);
 }
 
