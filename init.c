@@ -12,26 +12,24 @@
 
 #include "rush01.h"
 
-t_clues	populate_clues(char *str, t_clues *clues)
+void	populate_clues(char *str, t_clues *clues)
 {
-	int	index;
+	int	clue_index;
 	int	value;
 
-	index = 0;
-	value = 0;
-	while (index < SIZE * 4)
+	clue_index = 0;
+	while (clue_index < SIZE * 4)
 	{
-		value = str[index * 2] - '0';
-		if (index <= SIZE)
-			clues->top[index] = value;
-		else if (index <= SIZE * 2)
-			clues->bottom[index] = value;
-		else if (index <= SIZE * 3)
-			clues->left[index] = value;
-		else if (index <= SIZE * 4)
-			clues->right[index] = value;
-		index++;
-		str += 2;
+		value = str[clue_index * 2] - '0';
+		if (clue_index < SIZE)
+			clues->top[clue_index] = value;
+		else if (clue_index < SIZE * 2)
+			clues->bottom[clue_index - SIZE] = value;
+		else if (clue_index < SIZE * 3)
+			clues->left[clue_index - (SIZE * 2)] = value;
+		else if (clue_index < SIZE * 4)
+			clues->right[clue_index - (SIZE * 3)] = value;
+		clue_index++;
 	}
 }
 

@@ -35,19 +35,19 @@ typedef struct s_board
 bool		is_valid_input(int argc, char **argv);
 
 // Init
-t_clues		populate_clues(char *str, t_clues *clues);
+void		populate_clues(char *str, t_clues *clues);
 void		init_board(t_board *board);
 
 // Deduction
 bool		set_cell(t_board *board, int row, int col, int value);
 bool		apply_vertical_asc_four(t_board *board, int col);
 bool		apply_vertical_desc_four(t_board *board, int col);
-bool		apply_hoizontal_asc_four(t_board *board, int row);
+bool		apply_horizontal_asc_four(t_board *board, int row);
 bool		apply_horizontal_desc_four(t_board *board, int row);
 bool		apply_deductions(t_clues clues, t_board *board);
 
 // Utils
 int			error_return_one(void);
-void		print_board(int board[SIZE][SIZE]);
+void		print_board(t_board *board);
 
 #endif

@@ -21,7 +21,8 @@ int	main(int argc, char **argv)
 		return (error_return_one());
 	populate_clues(argv[1], &clues);
 	init_board(&board);
-	apply_deductions(clues, &board);
+	if (!apply_deductions(clues, &board))
+		return (error_return_one());
 	// backtracking(&board);
 	print_board(&board);
 	return (0);

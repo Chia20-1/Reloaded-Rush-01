@@ -51,16 +51,16 @@ bool	apply_vertical_desc_four(t_board *board, int col)
 	return (true);
 }
 
-bool	apply_hoizontal_asc_four(t_board *board, int row)
+bool	apply_horizontal_asc_four(t_board *board, int row)
 {
 	int	col;
 
 	col = 0;
-	while (row < SIZE)
+	while (col < SIZE)
 	{
 		if (!set_cell(board, row, col, col + 1))
 			return (false);
-		row++;
+		col++;
 	}
 	return (true);
 }
@@ -70,11 +70,11 @@ bool	apply_horizontal_desc_four(t_board *board, int row)
 	int	col;
 
 	col = 0;
-	while (row < SIZE)
+	while (col < SIZE)
 	{
 		if (!set_cell(board, row, SIZE - col - 1, col + 1))
 			return (false);
-		row++;
+		col++;
 	}
 	return (true);
 }
