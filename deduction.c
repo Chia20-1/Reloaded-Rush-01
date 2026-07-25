@@ -40,16 +40,16 @@ static bool	apply_horizontal(t_clues clues, t_board *board, int index)
 
 bool	apply_deductions(t_clues clues, t_board *board)
 {
-	int	i;
+	int	index;
 
-	i = 0;
-	while (i < SIZE)
+	index = 0;
+	while (index < SIZE)
 	{
-		if (!apply_vertical(clues, board, i))
+		if (!apply_vertical(clues, board, index))
 			return (false);
-		if (!apply_horizontal(clues, board, i))
+		if (!apply_horizontal(clues, board, index))
 			return (false);
-		i++;
+		index++;
 	}
 	return (true);
 }

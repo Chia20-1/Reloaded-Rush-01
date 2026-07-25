@@ -68,7 +68,7 @@ static bool	has_valid_count(char *str)
 			counter++;
 		str++;
 	}
-	if (counter != 16)
+	if (counter != (SIZE * 4))
 		return (false);
 	else
 		return (true);

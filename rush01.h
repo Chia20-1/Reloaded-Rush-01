@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 18:08:27 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/25 20:56:07 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,14 @@ bool		apply_deductions(t_clues clues, t_board *board);
 // Utils
 int			error_return_one(void);
 void		print_board(t_board *board);
+
+// Clue validation
+bool		are_all_clues_satisfied(t_board *board, t_clues *clues);
+
+// Solver
+
+
+// Testing
+// void		print_clues(t_clues *clues);
 
 #endif
