@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:45:29 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 18:09:18 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/26 14:33:26 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 static bool	is_valid_number(char c)
 {
-	if (c >= '1' && c <= '4')
+	int	int_c;
+
+	int_c = c - '0';
+	if (int_c >= 1 && int_c <= SIZE)
 		return (true);
 	else
 		return (false);

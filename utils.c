@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 16:24:41 by xinchong          #+#    #+#             */
-/*   Updated: 2026/07/25 23:10:25 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/26 14:35:07 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	print_board(t_board *board)
 		{
 			c = board->cells[row][col] + '0';
 			ft_putchar(c);
-			if (col < 3)
+			if (col < SIZE - 1)
 				ft_putchar(' ');
 			col++;
 		}

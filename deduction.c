@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:19:42 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 17:21:58 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/26 14:14:52 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ static bool	apply_vertical(t_clues clues, t_board *board, int index)
 		return (false);
 	if (clues.bottom[index] == 1 && !set_cell(board, SIZE - 1, index, SIZE))
 		return (false);
-	if (clues.top[index] == 4 && !apply_vertical_asc_four(board, index))
+	if (clues.top[index] == SIZE && !apply_vertical_asc(board, index))
 		return (false);
-	if (clues.bottom[index] == 4 && !apply_vertical_desc_four(board, index))
+	if (clues.bottom[index] == SIZE && !apply_vertical_desc(board, index))
 		return (false);
 	return (true);
 }
@@ -31,9 +31,9 @@ static bool	apply_horizontal(t_clues clues, t_board *board, int index)
 		return (false);
 	if (clues.right[index] == 1 && !set_cell(board, index, SIZE - 1, SIZE))
 		return (false);
-	if (clues.left[index] == 4 && !apply_horizontal_asc_four(board, index))
+	if (clues.left[index] == SIZE && !apply_horizontal_asc(board, index))
 		return (false);
-	if (clues.right[index] == 4 && !apply_horizontal_desc_four(board, index))
+	if (clues.right[index] == SIZE && !apply_horizontal_desc(board, index))
 		return (false);
 	return (true);
 }

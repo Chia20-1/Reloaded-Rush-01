@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 16:49:57 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/24 17:28:13 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/26 14:14:14 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ bool	set_cell(t_board *board, int row, int col, int value)
 	return (true);
 }
 
-bool	apply_vertical_asc_four(t_board *board, int col)
+bool	apply_vertical_asc(t_board *board, int col)
 {
 	int	row;
 
@@ -37,7 +37,7 @@ bool	apply_vertical_asc_four(t_board *board, int col)
 	return (true);
 }
 
-bool	apply_vertical_desc_four(t_board *board, int col)
+bool	apply_vertical_desc(t_board *board, int col)
 {
 	int	row;
 
@@ -51,7 +51,7 @@ bool	apply_vertical_desc_four(t_board *board, int col)
 	return (true);
 }
 
-bool	apply_horizontal_asc_four(t_board *board, int row)
+bool	apply_horizontal_asc(t_board *board, int row)
 {
 	int	col;
 
@@ -65,7 +65,7 @@ bool	apply_horizontal_asc_four(t_board *board, int row)
 	return (true);
 }
 
-bool	apply_horizontal_desc_four(t_board *board, int row)
+bool	apply_horizontal_desc(t_board *board, int row)
 {
 	int	col;
 

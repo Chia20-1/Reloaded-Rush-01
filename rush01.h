@@ -6,7 +6,7 @@
 /*   By: chilim <chilim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 17:11:28 by chilim            #+#    #+#             */
-/*   Updated: 2026/07/25 23:11:07 by chilim           ###   ########.fr       */
+/*   Updated: 2026/07/26 14:33:41 by chilim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ void		init_board(t_board *board);
 
 // Deduction
 bool		set_cell(t_board *board, int row, int col, int value);
-bool		apply_vertical_asc_four(t_board *board, int col);
-bool		apply_vertical_desc_four(t_board *board, int col);
-bool		apply_horizontal_asc_four(t_board *board, int row);
-bool		apply_horizontal_desc_four(t_board *board, int row);
+bool		apply_vertical_asc(t_board *board, int col);
+bool		apply_vertical_desc(t_board *board, int col);
+bool		apply_horizontal_asc(t_board *board, int row);
+bool		apply_horizontal_desc(t_board *board, int row);
 bool		apply_deductions(t_clues clues, t_board *board);
 
 // Utils
