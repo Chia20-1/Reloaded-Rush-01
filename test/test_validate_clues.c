@@ -49,7 +49,7 @@ void	print_clues(t_clues *clues)
 int	main(void)
 {
 	t_clues clues = {
-	.top = {4, 3, 2, 1},
+	.top = {5, 3, 2, 1},
 	.bottom = {1, 2, 2, 2},
 	.left = {4, 3, 2, 1},
 	.right = {1, 2, 2, 2}
@@ -62,7 +62,7 @@ int	main(void)
 		{4, 1, 2, 3}
 	}};
 
-	int clue_index = 3;
+	int clue_index = 0;
 	print_clues(&clues);
 	printf("\nFrom left: %d\n", count_from_left(&board, clue_index));
 	printf("From right: %d\n", count_from_right(&board, clue_index));
